@@ -1,4 +1,4 @@
-2.2 Digital väckarklocla (A-, B-, och C-nivå)
+2.2 Digital väckarklocka (A-, B-, och C-nivå)
 =============================================
 [2-2-digital-vackarklocka.pdf](https://github.com/1dv402/kursmaterial/raw/master/Laborationsuppgifter/2-2-digital-vackarklocka.pdf)
 
