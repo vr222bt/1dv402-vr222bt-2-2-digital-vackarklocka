@@ -41,6 +41,10 @@ namespace Digital_vackarklocka
             get { return _alarmHour; }
             set
             {
+                if (value < 0 || value > 23)
+                {
+                    throw new ArgumentException();
+                }
                 _alarmHour = value;
             }
         }
@@ -50,6 +54,10 @@ namespace Digital_vackarklocka
             get { return _alarmMinute; }
             set
             {
+                if (value < 0 || value > 59)
+                {
+                    throw new ArgumentException();
+                } 
                 _alarmMinute = value;
             }
         }
@@ -59,6 +67,10 @@ namespace Digital_vackarklocka
             get { return _hour; }
             set
             {
+                if (value < 0 || value > 23)
+                {
+                    throw new ArgumentException();
+                }
                 _hour = value;
             }
         }
@@ -68,6 +80,10 @@ namespace Digital_vackarklocka
             get { return _minute; }
             set
             {
+                if (value < 0 || value > 59)
+                {
+                    throw new ArgumentException();
+                }
                 _minute = value;
             }
         }
