@@ -26,6 +26,11 @@ namespace Digital_vackarklocka
             AlarmClock test1 = new AlarmClock();
             Console.WriteLine(test1);
 
+            //test 2
+            ViewTestHeader("Test 2\nTest av konstuktornmed två parametrar. (9, 42)");
+            AlarmClock test2 = new AlarmClock(9, 42);
+            Console.WriteLine(test2);
+
             
             
         }
