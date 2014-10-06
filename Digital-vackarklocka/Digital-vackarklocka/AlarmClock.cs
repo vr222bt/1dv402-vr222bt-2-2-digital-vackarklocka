@@ -90,6 +90,23 @@ namespace Digital_vackarklocka
         //Methods
         public bool TickTock()
         {
+            _minute++;
+            //BEEP BEEP BEEP
+            if (_alarmHour == _hour && _alarmMinute == _minute)
+            {
+                return true;
+            }
+            //Lägger på en timme och börjar om från 0 med minuterna           
+            if (_minute > 59)
+            {
+                _hour++;
+                _minute = 0;
+            }
+            if (_hour > 23)
+            {
+                _hour = 0;
+            }
+
             return false;
         }
 
