@@ -10,8 +10,16 @@ namespace Digital_vackarklocka
     {
         static void Main(string[] args)
         {
-            AlarmClock test = new AlarmClock(13, 14, 13, 20);
-            Run(test, 13);
+            try
+            {
+                AlarmClock test = new AlarmClock(13, 14, 13, 20);
+                Run(test, 13);
+            }
+            catch (ArgumentException ex)
+            {
+
+                ViewErrorMessage(ex.Message);
+            }
             
             //Testar lite:
             //AlarmClock test = new AlarmClock(9, 55, 10, 0);
@@ -55,7 +63,9 @@ namespace Digital_vackarklocka
 
         private static void ViewErrorMessage(string message)
         {
-
+            Console.BackgroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine(message);
+            Console.ResetColor();
         }
 
         private static void ViewTestHeader(string header)
