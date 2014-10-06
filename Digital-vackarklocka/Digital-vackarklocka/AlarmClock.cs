@@ -14,6 +14,28 @@ namespace Digital_vackarklocka
         private int _hour;
         private int _minute;
 
+
+        public AlarmClock()
+        {
+
+        }
+
+        public AlarmClock(int hour, int minute)
+        {
+            _hour = hour;
+            _minute = minute;
+        }
+
+        public AlarmClock(int hour, int minute, int alarmHour, int alarmMinute)
+        {
+            _hour = hour;
+            _minute = minute;
+            _alarmHour = alarmHour;
+            _alarmMinute = alarmMinute;
+        }
+
+
+        
         public int AlarmHour
         {
             get { return _alarmHour; }
