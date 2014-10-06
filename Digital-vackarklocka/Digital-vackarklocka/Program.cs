@@ -27,12 +27,14 @@ namespace Digital_vackarklocka
             Console.WriteLine(test1);
 
             //test 2
-            ViewTestHeader("Test 2\nTest av konstuktornmed två parametrar. (9, 42)");
+            ViewTestHeader("Test 2\nTest av konstuktorn med två parametrar. (9, 42)");
             AlarmClock test2 = new AlarmClock(9, 42);
             Console.WriteLine(test2);
 
-            
-            
+            //test 3
+            ViewTestHeader("Test 3\nTest av konstruktorn med fyra parametrar. (13, 24, 7, 35)");
+            AlarmClock test3 = new AlarmClock(13, 24, 7, 35);
+            Console.WriteLine(test3);
         }
 
         private static string HorizontalLine = "═══════════════════════════════════════════════════════════════════════════════";
