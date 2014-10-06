@@ -10,6 +10,8 @@ namespace Digital_vackarklocka
     {
         static void Main(string[] args)
         {
+            Console.Title = "Väckarklockan XT-002 Deconstructor";
+
             Display();
             //test 1
             ViewTestHeader("Test 1\nTest av standardkonstuktorn");
