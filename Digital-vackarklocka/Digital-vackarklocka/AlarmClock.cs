@@ -91,11 +91,7 @@ namespace Digital_vackarklocka
         public bool TickTock()
         {
             _minute++;
-            //BEEP BEEP BEEP
-            if (_alarmHour == _hour && _alarmMinute == _minute)
-            {
-                return true;
-            }
+
             //Lägger på en timme och börjar om från 0 med minuterna           
             if (_minute > 59)
             {
@@ -107,13 +103,18 @@ namespace Digital_vackarklocka
                 _hour = 0;
             }
 
+            //BEEP BEEP BEEP
+            if (_alarmHour == _hour && _alarmMinute == _minute)
+            {
+                return true;
+            }
             return false;
         }
 
         public override string ToString()
         {
             
-            return String.Format("\t{0}:{1:00} <{2}:{3:00}>", _hour, _minute, _alarmHour, _alarmMinute);
+            return String.Format("\t{0:##}:{1:00} <{2:##}:{3:00}>", _hour, _minute, _alarmHour, _alarmMinute);
         }
     }
 }

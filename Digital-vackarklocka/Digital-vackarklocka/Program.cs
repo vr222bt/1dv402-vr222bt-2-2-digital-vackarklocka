@@ -10,13 +10,17 @@ namespace Digital_vackarklocka
     {
         static void Main(string[] args)
         {
-            AlarmClock test = new AlarmClock(8, 59, 15, 6);
-            Console.WriteLine(test);
             
-        
-            
+            AlarmClock test = new AlarmClock(9, 59, 10, 0);
 
-
-        }
+            if (test.TickTock())
+            {
+                Console.WriteLine("{0} Tuut tuut tuut", test); 
+            }
+            else
+            {
+                Console.WriteLine(test);
+            }
+        }                         
     }
 }
