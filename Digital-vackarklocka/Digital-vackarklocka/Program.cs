@@ -10,17 +10,7 @@ namespace Digital_vackarklocka
     {
         static void Main(string[] args)
         {
-            //Testar lite med det här när jag ändrar i koden
-            try
-            {
-                AlarmClock test = new AlarmClock(0, 14, 0, 20);
-                Run(test, 13);
-            }
-            catch (ArgumentException ex)
-            {
-
-                ViewErrorMessage(ex.Message);
-            }
+            Display();
             //test 1
             ViewTestHeader("Test 1\nTest av standardkonstuktorn");
             AlarmClock test1 = new AlarmClock();
@@ -88,11 +78,54 @@ namespace Digital_vackarklocka
                 ViewErrorMessage(ex.Message);
             }
 
+            //test 7
+            ViewTestHeader("Test 7\nTestar konstruktorer så att undantag kastas då tid och alarmtid tilldelas\nfelaktiga värden");
+            //Testar timmar
+            try
+            {
+                AlarmClock test7 = new AlarmClock(24, 00);
+            }
+            catch (ArgumentException ex)
+            {
+
+                ViewErrorMessage(ex.Message);
+            }
+            //Testar minuter
+            try
+            {
+                AlarmClock test7 = new AlarmClock(00, 60);
+            }
+            catch (ArgumentException ex)
+            {
+
+                ViewErrorMessage(ex.Message);
+            }
+            //testar alarm timmar
+            try
+            {
+                AlarmClock test7 = new AlarmClock(00, 00, 24, 00);
+            }
+            catch (ArgumentException ex)
+            {
+
+                ViewErrorMessage(ex.Message);
+            }
+            //testar alarm minuter
+            try
+            {
+                AlarmClock test7 = new AlarmClock(00, 00, 00, 60);
+            }
+            catch (ArgumentException ex)
+            {
+
+                ViewErrorMessage(ex.Message);
+            }
+
         }
 
         private static string HorizontalLine = "═══════════════════════════════════════════════════════════════════════════════";
         
-
+        //Låter klockan gå och markerar när klockan och alarmet är samma
         private static void Run(AlarmClock ac, int minutes)
         {
             for (int i = 0; i < minutes; i++)
@@ -112,20 +145,21 @@ namespace Digital_vackarklocka
             }
 
         }
-
+        //Tar emot och skriver ut felmeddelanden
         private static void ViewErrorMessage(string message)
         {
             Console.BackgroundColor = ConsoleColor.DarkRed;
             Console.WriteLine(message);
             Console.ResetColor();
         }
-
+        //Tar emot och skriver ut en header
         private static void ViewTestHeader(string header)
         {
             Console.WriteLine(HorizontalLine);
             Console.WriteLine(header);
             Console.WriteLine();
         }
+        
         private static void Display()
         {
             //Lite utsmyckning
