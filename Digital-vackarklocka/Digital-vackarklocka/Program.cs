@@ -44,13 +44,50 @@ namespace Digital_vackarklocka
             Run(test3, 13);
 
             //test 5
-            ViewTestHeader("Test 5\nStäller befintligt AlarmClock-objekt till tiden 6:12 och alarmtiden till 6:15 och låter den gå 6 minuter");
+            ViewTestHeader("Test 5\nStäller befintligt AlarmClock-objekt till tiden 6:12 och alarmtiden till 6:15\noch låter den gå 6 minuter");
             Display();
             test3.Hour = 6;
             test3.Minute = 12;
             test3.AlarmHour = 6;
             test3.AlarmMinute = 15;
             Run(test3, 6);
+
+            //test 6
+            ViewTestHeader("Test 6\nTestar egenskaperna så att undantag kastas då tid och alarmtid tilldelas\nfelaktiga värden");
+            AlarmClock test6 = new AlarmClock();
+            try
+            {
+                test6.AlarmHour = 24;
+            }
+            catch (ArgumentException ex)
+            {
+               ViewErrorMessage(ex.Message);
+            }
+            try
+            {
+                test6.AlarmMinute = 60;
+            }
+            catch (ArgumentException ex)
+            {
+                ViewErrorMessage(ex.Message);
+            }
+            try
+            {
+                test6.Hour = 24;
+            }
+            catch (ArgumentException ex)
+            {
+                ViewErrorMessage(ex.Message);
+            }
+            try
+            {
+                test6.Minute = 60;
+            }
+            catch (ArgumentException ex)
+            {
+                ViewErrorMessage(ex.Message);
+            }
+
         }
 
         private static string HorizontalLine = "═══════════════════════════════════════════════════════════════════════════════";
