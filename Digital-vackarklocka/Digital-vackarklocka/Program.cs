@@ -11,16 +11,41 @@ namespace Digital_vackarklocka
         static void Main(string[] args)
         {
             
-            AlarmClock test = new AlarmClock(9, 59, 10, 0);
+            //Testar lite:
+            //AlarmClock test = new AlarmClock(9, 55, 10, 0);
 
-            if (test.TickTock())
-            {
-                Console.WriteLine("{0} Tuut tuut tuut", test); 
-            }
-            else
-            {
-                Console.WriteLine(test);
-            }
-        }                         
+            //for (int i = 0; i < 10; i++)
+            //{
+                
+            //    if (test.TickTock())
+            //    {
+            //        Console.WriteLine("{0,} Tuut tuut tuut", test);
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine(test);
+            //    } 
+            //}
+        }
+
+        private static string HorizontalLine = "══════════════════════════════════════════════════════════════════════════════════════";
+        
+
+        private void Run(AlarmClock ac, int minutes)
+        {
+
+        }
+
+        private void ViewErrorMessage(string message)
+        {
+
+        }
+
+        private void ViewTestHeader(string header)
+        {
+
+        }
+
+                                 
     }
 }
