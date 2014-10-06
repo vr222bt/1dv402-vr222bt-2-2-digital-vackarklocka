@@ -10,6 +10,13 @@ namespace Digital_vackarklocka
     {
         static void Main(string[] args)
         {
+            AlarmClock test = new AlarmClock(8, 59, 15, 6);
+            Console.WriteLine(test);
+            
+        
+            
+
+
         }
     }
 }

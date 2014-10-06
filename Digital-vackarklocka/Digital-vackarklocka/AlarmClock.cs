@@ -27,10 +27,10 @@ namespace Digital_vackarklocka
 
         public AlarmClock(int hour, int minute, int alarmHour, int alarmMinute)
         {
-            _hour = hour;
-            _minute = minute;
-            _alarmHour = alarmHour;
-            _alarmMinute = alarmMinute;
+            Hour = hour;
+            Minute = minute;
+            AlarmHour = alarmHour;
+            AlarmMinute = alarmMinute;
         }
 
 
@@ -42,7 +42,7 @@ namespace Digital_vackarklocka
             {
                 if (value < 0 || value > 23)
                 {
-                    throw new ArgumentException();
+                    throw new ArgumentException("Du måste sätta larmet mellan 0 och 23 timmar!");
                 }
                 _alarmHour = value;
             }
@@ -55,7 +55,7 @@ namespace Digital_vackarklocka
             {
                 if (value < 0 || value > 59)
                 {
-                    throw new ArgumentException();
+                    throw new ArgumentException("Du måste sätta larmet mellan 0 och 59 minuter!");
                 } 
                 _alarmMinute = value;
             }
@@ -68,7 +68,7 @@ namespace Digital_vackarklocka
             {
                 if (value < 0 || value > 23)
                 {
-                    throw new ArgumentException();
+                    throw new ArgumentException("Du måste sätta klockans timmar mellan 0 och 23!");
                 }
                 _hour = value;
             }
@@ -81,7 +81,7 @@ namespace Digital_vackarklocka
             {
                 if (value < 0 || value > 59)
                 {
-                    throw new ArgumentException();
+                    throw new ArgumentException("Du måste sätta klockans minuter mellan 0 och 59!");
                 }
                 _minute = value;
             }
@@ -110,9 +110,10 @@ namespace Digital_vackarklocka
             return false;
         }
 
-        public string ToString()
+        public override string ToString()
         {
-            return null;
+            
+            return String.Format("\t{0}:{1:00} <{2}:{3:00}>", _hour, _minute, _alarmHour, _alarmMinute);
         }
     }
 }
