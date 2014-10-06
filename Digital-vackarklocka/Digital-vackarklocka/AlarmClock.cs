@@ -114,7 +114,7 @@ namespace Digital_vackarklocka
         public override string ToString()
         {
             
-            return String.Format("\t{0:0}:{1:00} <{2:0}:{3:00}>", _hour, _minute, _alarmHour, _alarmMinute);
+            return String.Format("\t{0,2:0}:{1:00} <{2:0}:{3:00}>", _hour, _minute, _alarmHour, _alarmMinute);
         }
     }
 }
