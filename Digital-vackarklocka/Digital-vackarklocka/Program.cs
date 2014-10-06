@@ -20,6 +20,8 @@ namespace Digital_vackarklocka
 
                 ViewErrorMessage(ex.Message);
             }
+
+            ViewTestHeader("Test 1\nNu händer det saker");
             
             //Testar lite:
             //AlarmClock test = new AlarmClock(9, 55, 10, 0);
@@ -38,7 +40,7 @@ namespace Digital_vackarklocka
             //}
         }
 
-        private static string HorizontalLine = "══════════════════════════════════════════════════════════════════════════════════════";
+        private static string HorizontalLine = "═══════════════════════════════════════════════════════════════════════════════";
         
 
         private static void Run(AlarmClock ac, int minutes)
@@ -70,7 +72,8 @@ namespace Digital_vackarklocka
 
         private static void ViewTestHeader(string header)
         {
-
+            Console.WriteLine(HorizontalLine);
+            Console.WriteLine(header);
         }
 
                                  
