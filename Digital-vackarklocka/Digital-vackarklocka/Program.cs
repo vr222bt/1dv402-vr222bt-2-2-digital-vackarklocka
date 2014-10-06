@@ -10,9 +10,10 @@ namespace Digital_vackarklocka
     {
         static void Main(string[] args)
         {
+            //Testar lite med det här när jag ändrar i koden
             try
             {
-                AlarmClock test = new AlarmClock(13, 14, 13, 20);
+                AlarmClock test = new AlarmClock(0, 14, 0, 20);
                 Run(test, 13);
             }
             catch (ArgumentException ex)
@@ -20,24 +21,13 @@ namespace Digital_vackarklocka
 
                 ViewErrorMessage(ex.Message);
             }
+            //test 1
+            ViewTestHeader("Test 1\nTest av standardkonstuktorn");
+            AlarmClock test1 = new AlarmClock();
+            Console.WriteLine(test1);
 
-            ViewTestHeader("Test 1\nNu händer det saker");
             
-            //Testar lite:
-            //AlarmClock test = new AlarmClock(9, 55, 10, 0);
-
-            //for (int i = 0; i < 10; i++)
-            //{
-                
-            //    if (test.TickTock())
-            //    {
-            //        Console.WriteLine("{0} Tuut tuut tuut", test);
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine(test);
-            //    } 
-            //}
+            
         }
 
         private static string HorizontalLine = "═══════════════════════════════════════════════════════════════════════════════";
