@@ -35,6 +35,22 @@ namespace Digital_vackarklocka
             ViewTestHeader("Test 3\nTest av konstruktorn med fyra parametrar. (13, 24, 7, 35)");
             AlarmClock test3 = new AlarmClock(13, 24, 7, 35);
             Console.WriteLine(test3);
+
+            //test 4
+            ViewTestHeader("Test 4\nStäller befintligt AlarmClock-object till 23:58 och låter den gå 13 minuter");
+            Display();
+            test3.Hour = 23;
+            test3.Minute = 58;
+            Run(test3, 13);
+
+            //test 5
+            ViewTestHeader("Test 5\nStäller befintligt AlarmClock-objekt till tiden 6:12 och alarmtiden till 6:15 och låter den gå 6 minuter");
+            Display();
+            test3.Hour = 6;
+            test3.Minute = 12;
+            test3.AlarmHour = 6;
+            test3.AlarmMinute = 15;
+            Run(test3, 6);
         }
 
         private static string HorizontalLine = "═══════════════════════════════════════════════════════════════════════════════";
@@ -71,8 +87,23 @@ namespace Digital_vackarklocka
         {
             Console.WriteLine(HorizontalLine);
             Console.WriteLine(header);
+            Console.WriteLine();
         }
-
+        private static void Display()
+        {
+            //Lite utsmyckning
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine(" ╔═════════════════════════════════════════════╗ ");
+            Console.WriteLine(" ║      Väckarklockan XT-002 Deconstructor     ║ ");
+            Console.Write(" ║");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write("    So tired. I will rest for just a moment! ");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("║ ");
+            Console.WriteLine(" ╚═════════════════════════════════════════════╝ ");
+            Console.WriteLine();
+            Console.ResetColor();
+        }
                                  
     }
 }
