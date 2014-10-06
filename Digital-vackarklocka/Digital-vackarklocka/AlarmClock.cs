@@ -72,6 +72,14 @@ namespace Digital_vackarklocka
             }
         }
 
+        public bool TickTock()
+        {
+            return false;
+        }
 
+        public string ToString()
+        {
+            return null;
+        }
     }
 }
