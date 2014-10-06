@@ -14,16 +14,15 @@ namespace Digital_vackarklocka
         private int _hour;
         private int _minute;
 
-
-        public AlarmClock()
+        //Constructors
+        public AlarmClock() : this(0,0)
         {
 
         }
 
-        public AlarmClock(int hour, int minute)
+        public AlarmClock(int hour, int minute) : this(hour, minute, 0, 0)
         {
-            _hour = hour;
-            _minute = minute;
+
         }
 
         public AlarmClock(int hour, int minute, int alarmHour, int alarmMinute)
@@ -35,7 +34,7 @@ namespace Digital_vackarklocka
         }
 
 
-        
+        //Properties
         public int AlarmHour
         {
             get { return _alarmHour; }
@@ -88,6 +87,7 @@ namespace Digital_vackarklocka
             }
         }
 
+        //Methods
         public bool TickTock()
         {
             return false;
