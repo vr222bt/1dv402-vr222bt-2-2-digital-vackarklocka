@@ -35,6 +35,7 @@ namespace Digital_vackarklocka
 
 
         //Properties
+        //Undersöker det angivna om värdet är rimligt
         public int AlarmHour
         {
             get { return _alarmHour; }
@@ -48,6 +49,7 @@ namespace Digital_vackarklocka
             }
         }
 
+        //Undersöker det angivna om värdet är rimligt
         public int AlarmMinute
         {
             get { return _alarmMinute; }
@@ -61,6 +63,7 @@ namespace Digital_vackarklocka
             }
         }
 
+        //Undersöker det angivna om värdet är rimligt
         public int Hour
         {
             get { return _hour; }
@@ -74,6 +77,7 @@ namespace Digital_vackarklocka
             }
         }
 
+        //Undersöker det angivna om värdet är rimligt
         public int Minute
         {
             get { return _minute; }
@@ -88,27 +92,48 @@ namespace Digital_vackarklocka
         }
 
         //Methods
+        //Klockan går en minut
         public bool TickTock()
         {
-            _minute++;
+            //Ny lösning
+            if (Minute < 59)
+            {
+                Minute++;
+            }
+            else
+            {
+                Minute = 0;
+                if (Hour < 23)
+                {
+                    Hour++;
+                }
+                else
+                {
+                    Hour = 0;
+                }
+            }
 
-            //Lägger på en timme och börjar om från 0 med minuterna           
-            if (_minute > 59)
-            {
-                _hour++;
-                _minute = 0;
-            }
-            if (_hour > 23)
-            {
-                _hour = 0;
-            }
+            return _alarmHour == _hour && _alarmMinute == _minute;
+            //Gammal lösning - 
+            //_minute++;
 
-            //BEEP BEEP BEEP
-            if (_alarmHour == _hour && _alarmMinute == _minute)
-            {
-                return true;
-            }
-            return false;
+            ////Lägger på en timme och börjar om från 0 med minuterna           
+            //if (_minute > 59)
+            //{
+            //    _hour++;
+            //    _minute = 0;
+            //}
+            //if (_hour > 23)
+            //{
+            //    _hour = 0;
+            //}
+
+            //Larmet går! 
+            //if (_alarmHour == _hour && _alarmMinute == _minute)
+            //{
+            //    return true;
+            //}
+            //return false;
         }
 
         public override string ToString()

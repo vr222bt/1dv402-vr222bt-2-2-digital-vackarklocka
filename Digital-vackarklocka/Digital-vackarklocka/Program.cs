@@ -30,7 +30,7 @@ namespace Digital_vackarklocka
 
             //test 4
             ViewTestHeader("Test 4\nStäller befintligt AlarmClock-object till 23:58 och låter den gå 13 minuter");
-            Display();
+            Display();            
             test3.Hour = 23;
             test3.Minute = 58;
             Run(test3, 13);
@@ -147,14 +147,14 @@ namespace Digital_vackarklocka
             }
 
         }
-        //Tar emot och skriver ut felmeddelanden
+        //Skriver ut felmeddelanden
         private static void ViewErrorMessage(string message)
         {
             Console.BackgroundColor = ConsoleColor.DarkRed;
             Console.WriteLine(message);
             Console.ResetColor();
         }
-        //Tar emot och skriver ut en header
+        //Skriver ut en header
         private static void ViewTestHeader(string header)
         {
             Console.WriteLine(HorizontalLine);
