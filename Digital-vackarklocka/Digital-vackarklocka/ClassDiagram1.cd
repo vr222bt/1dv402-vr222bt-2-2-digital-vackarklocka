@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="Digital_vackarklocka.AlarmClock">
-    <Position X="0.75" Y="1.25" Width="3.75" />
+    <Position X="1" Y="0.5" Width="3.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAEEAAAEAAQAQAAEAAAAACYAAAAAAEAAAAA=</HashCode>
       <FileName>AlarmClock.cs</FileName>
@@ -10,8 +10,15 @@
   <Class Name="Digital_vackarklocka.Program">
     <Position X="7.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAACAAI=</HashCode>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAIABAACAAI=</HashCode>
       <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digital_vackarklocka.test">
+    <Position X="4.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>test.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
