@@ -93,7 +93,7 @@ namespace Digital_vackarklocka
 
         //Methods
         //Klockan går en minut
-        private bool TickTock()
+        public bool TickTock()
         {
             //Ny lösning
             if (Minute < 59)
